@@ -1,0 +1,32 @@
+paths:
+  /api/products/{pid}:
+    delete:
+      tags:
+        - Products
+      summary: Delete product by id
+      parameters:
+        - name: pid
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Returns the notification that the product with the given id was deleted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deleteProductById'
+        '404':
+          description: Product not found
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    deleteProductById:
+      type: object
+      properties:
+        response:
+          type: string
+          example: The product with id 618f1a7b3b1cb400159f2c9e was deleted

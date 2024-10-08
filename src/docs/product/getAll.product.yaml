@@ -1,0 +1,46 @@
+paths:
+  /api/products:
+    get:
+      tags:
+        - Products
+      summary: Get all products
+      responses:
+        '200':
+          description: Returns all products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Products'
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    Products:
+      type: object
+      properties:
+        _id:
+          type: ObjectId
+          example: 618f1a7b3b1cb400159f2c9e
+        title:
+          type: string
+          example: Product 1 of example
+        description:
+          type: string
+          example: This is the first product of example.
+        thumbnail:
+          type: string
+          example: ["www.google.com"]
+        code:
+          type: string
+          example: PROD001
+        stock:
+          type: integer
+          example: 5
+        price:
+          type: number
+          example: 129900
+        category:
+          type: string
+          example: Examples

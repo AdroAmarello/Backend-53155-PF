@@ -1,0 +1,88 @@
+paths:
+  /api/products/{pid}:
+    put:
+      tags:
+        - Products
+      summary: Update product by id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/updateProductById'
+      parameters:
+        - name: pid
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Returns the product with the given id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/updateProductById'
+        '404':
+          description: Product not found
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    updateProductById:
+      type: object
+      properties:
+        owner:
+          type: string
+          example: admin
+        _id:
+          type: ObjectId
+          example: 618f1a7b3b1cb400159f2c9e
+        title:
+          type: string
+          example: Product 1 to be updated
+        description:
+          type: string
+          example: This is the product 1 to be updated
+        thumbnail:
+          type: string
+          example: ["www.google.com"]
+        code:
+          type: string
+          example: PROD001
+        stock:
+          type: integer
+          example: 5
+        price:
+          type: number
+          example: 129900
+        category:
+          type: string
+          example: Examples
+  requestBodies:
+    updateProductById:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Product 1 to be updated
+        description:
+          type: string
+          example: This is the product 1 to be updated
+        thumbnail:
+          type: string
+          example: ["www.google.com"]
+        code:
+          type: string
+          example: PROD001
+        stock:
+          type: integer
+          example: 5
+        price:
+          type: number
+          example: 129900
+        category:
+          type: string
+          example: Examples
+

@@ -1,0 +1,42 @@
+paths:
+  /api/carts/{cid}:
+    delete:
+      tags:
+        - Carts
+      summary: Clear cart
+      parameters:
+        - name: cid
+          in: path
+          description: ID of the cart
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Returns the empty cart with the given id 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/clearCart'
+        '404':
+          description: Cart not found
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    clearCart:
+      type: object
+      properties:
+        response:
+          type: string
+          example: The cart with id 618f1a7b3b1cb400159f2c9e is empty
+        payload:
+          type: object
+          properties:
+            cid:
+              type: ObjectId
+              example: 66b287fe939a0e021e2f99de
+            products:
+              type: array
+              example: []
+        

@@ -1,0 +1,84 @@
+paths:
+  /api/products:
+    post:
+      tags:
+        - Products
+      summary: Create product
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/createProduct'
+      responses:
+        '201':
+          description: The product was created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/createProduct'
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    createProduct:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Product 1 created
+        description:
+          type: string
+          example: This is the product 1 created.
+        thumbnail:
+          type: string
+          example: ["www.google.com"]
+        code:
+          type: string
+          example: PROD001
+        stock:
+          type: integer
+          example: 5
+        status:
+          type: boolean
+          example: true
+        price:
+          type: number
+          example: 129900
+        category:
+          type: string
+          example: Examples
+        owner:
+          type: string
+          example: admin
+        _id:
+          type: ObjectId
+          example: 618f1a7b3b1cb400159f2c9e
+  requestBodies:
+    createProduct:
+      type: object
+      properties:
+        title:
+          type: string
+          example: Product 1 to be created
+        description:
+          type: string
+          example: This is the product 1 to be created.
+        thumbnail:
+          type: string
+          example: ["www.google.com"]
+        code:
+          type: string
+          example: PROD001
+        stock:
+          type: integer
+          example: 5
+        price:
+          type: number
+          example: 129900
+        category:
+          type: string
+          example: Examples
+

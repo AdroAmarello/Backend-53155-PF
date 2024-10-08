@@ -1,0 +1,51 @@
+paths:
+  /api/carts/{cid}/products/{pid}:
+    delete:
+      tags:
+        - Carts
+      summary: Delete product from cart
+      parameters:
+        - name: cid
+          in: path
+          description: ID of the cart
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          description: ID of the product
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Returns the cart with the given id with the deleted product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/deleteProductFromCart'
+        '400':
+          description: Invalid cart or product
+        '404':
+          description: Cart or product not found
+        '500':
+          description: Internal server error
+components:
+  schemas:
+    deleteProductFromCart:
+      type: object
+      properties:
+        cid:
+          type: ObjectId
+          example: 66b287fe939a0e021e2f99de
+        products:
+          type: array
+          properties:
+            pid: 
+              type: ObjectId
+              example: 66ae9eb2e6cb6a1af4657aa1
+      example:
+        - cid: 66b287fe939a0e021e2f99de
+          products:
+            - pid: 66ae9eb2e6cb6a1af4657aa1
+              quantity: 1

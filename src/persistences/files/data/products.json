@@ -1,0 +1,135 @@
+[
+    {
+        "id": 1,
+        "title": "Primer Producto",
+        "description": "El primer producto",
+        "price": 100,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/01",
+        "category": "conectores",
+        "stock": 30
+    },
+    {
+        "id": 2,
+        "title": "Segundo Producto",
+        "description": "El segundo producto",
+        "price": 500,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/02",
+        "category": "conectores",
+        "stock": 20
+    },
+    {
+        "id": 3,
+        "title": "Tercer Producto",
+        "description": "El tercer producto",
+        "price": 1000,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/03",
+        "category": "conectores",
+        "stock": 5
+    },
+    {
+        "id": 4,
+        "title": "Cuarto Producto",
+        "description": "El cuarto producto",
+        "price": 150,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/04",
+        "category": "conectores",
+        "stock": 5
+    },
+    {
+        "id": 5,
+        "title": "Quinto Producto",
+        "description": "El quinto producto",
+        "price": 200,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/05",
+        "category": "conectores",
+        "stock": 10
+    },
+    {
+        "id": 6,
+        "title": "Sexto Producto",
+        "description": "El sexto producto",
+        "price": 120,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/06",
+        "category": "conectores",
+        "stock": 25
+    },
+    {
+        "id": 7,
+        "title": "Séptimo Producto",
+        "description": "El séptimo producto",
+        "price": 500,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A1110/07",
+        "category": "conectores",
+        "stock": 10
+    },
+    {
+        "id": 8,
+        "title": "Octavo Producto",
+        "description": "El octavo producto",
+        "price": 1000,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A159/501",
+        "category": "herrajes",
+        "stock": 6
+    },
+    {
+        "id": 9,
+        "title": "Noveno Producto",
+        "description": "El noveno producto",
+        "price": 150,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A159/502",
+        "category": "herrajes",
+        "stock": 5
+    },
+    {
+        "id": 10,
+        "title": "Décimo Producto",
+        "description": "El décimo producto",
+        "price": 3000,
+        "thumbnail": "https://www.google.com.ar/",
+        "code": "A311/501",
+        "category": "categoryPostmanCambiado",
+        "stock": 3
+    },
+    {
+        "id": 11,
+        "title": "Conector desde postman",
+        "description": "Descripcion del conector desde postman",
+        "price": 1,
+        "thumbnail": "http://www.google.com.ar",
+        "code": "codigoPostman1",
+        "category": "otra",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "id": 12,
+        "title": "Conector desde postman",
+        "description": "Descripcion del conector desde postman",
+        "price": 1,
+        "thumbnail": "http://www.google.com.ar",
+        "code": "codigoPostman2",
+        "category": "otra",
+        "stock": 10,
+        "status": true
+    },
+    {
+        "id": 13,
+        "title": "Conector desde postman",
+        "description": "Descripcion del conector desde postman",
+        "price": 1,
+        "thumbnail": "http://www.google.com.ar",
+        "code": "codigoPostman3",
+        "category": "herrajes",
+        "stock": 11,
+        "status": true
+    }
+]
